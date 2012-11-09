@@ -22,11 +22,11 @@
     ],
     "dependencies":{
         "canvas":"~0.13.1",
-        "colors":"~0.6.0",
         "cssom":"~0.2.5",
-        "async":"~0.1.22",
+        "forEachAsync":"~2.2.1",
         "underscore":"~1.4.2",
-        "cssbeautify":"~0.3.0"
+        "cssbeautify":"~0.3.0",
+        "nlogger":"~0.3.1"
     },
     "engines":{
         "node":">= 0.8.1"
