@@ -1,0 +1,40 @@
+.ui-button {
+    cursor: pointer;
+    display: inline-block;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+}
+.ui-button-lorange{
+    background-image: url(https://i.alipayobjects.com/e/201211/1ao4jTb7ae.png);
+    background-repeat: no-repeat;
+    height: auto;
+}
+.ui-button-lorange .ui-button-text{
+    background-image: url(https://i.alipayobjects.com/e/201211/1aoHzOUHEa.png);
+    background-position: right 0;
+    background-repeat: no-repeat;
+    padding: 7px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ui-button-llight{
+    background-image: url(https://i.alipayobjects.com/e/201211/1arPvK20TE.png);
+    background-repeat: no-repeat;
+    height: auto;
+}
+.ui-button-llight .ui-button-text{
+    background-image: url(https://i.alipayobjects.com/e/201211/1arVZzcUBQ.png);
+    background-position: right 0;
+    background-repeat: no-repeat;
+    padding: 7px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #595959;
+}

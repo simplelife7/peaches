@@ -1,0 +1,15 @@
+{
+    "name":"Peaches",
+    "root":".",
+    "version":"0.0.1",
+    "dependencies":{
+    },
+    "images":"./images",
+    "output":{
+        "./dist/peaches.css":[
+            "./src/base.css",
+            "./src/button.css",
+            "./src/index.css"
+        ]
+    }
+}
