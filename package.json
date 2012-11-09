@@ -23,7 +23,7 @@
     "dependencies":{
         "canvas":"~0.13.1",
         "cssom":"~0.2.5",
-        "forEachAsync":"~2.2.1",
+        "forEachAsync":"2.2.0",
         "underscore":"~1.4.2",
         "cssbeautify":"~0.3.0",
         "nlogger":"~0.3.1"
