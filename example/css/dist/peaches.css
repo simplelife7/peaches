@@ -389,15 +389,15 @@ body .fn-hide {
 }
 
 .ui-button-lorange {
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
     height: 35px;
-    background-position: 0px -88px;
+    background-position: -3px -41px;
 }
 
 .ui-button-lorange .ui-button-text {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: right -191px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: right -194px;
     background-repeat: no-repeat;
     padding: 7px 20px;
     display: inline-block;
@@ -407,15 +407,15 @@ body .fn-hide {
 }
 
 .ui-button-llight {
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
     height: 35px;
-    background-position: 0px -123px;
+    background-position: 0px -88px;
 }
 
 .ui-button-llight .ui-button-text {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: right -226px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: right -229px;
     background-repeat: no-repeat;
     padding: 7px 20px;
     display: inline-block;
@@ -438,20 +438,20 @@ body .fn-hide {
     height: 33px;
     text-indent: -9999px;
     display: inline-block;
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
-    background-position: 0px -158px;
+    background-position: 0px -123px;
 }
 
 .safeguard {
     display: inline-block;
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     width: 61px;
     height: 25px;
     position: absolute;
     top: 0;
     left: 100px;
-    background-position: -203px -26px;
+    background-position: -95px -123px;
 }
 
 .separator {
@@ -460,7 +460,7 @@ body .fn-hide {
     position: relative;
     top: 50%;
     margin-top: -44px;
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
     background-position: 0px 0px;
     background-color: #ccc;
@@ -505,8 +505,8 @@ body .fn-hide {
 }
 
 .ui-securelevel-high .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -292px -51px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: 0px -182px;
 }
 
 .ui-securelevel-low {
@@ -515,8 +515,8 @@ body .fn-hide {
 }
 
 .ui-securelevel-low .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -203px -63px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -77px -182px;
 }
 
 .ui-securelevel-medium {
@@ -525,8 +525,8 @@ body .fn-hide {
 }
 
 .ui-securelevel-medium .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -215px -51px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -15px -76px;
 }
 
 .ui-securelevel-max {
@@ -535,8 +535,8 @@ body .fn-hide {
 }
 
 .ui-securelevel-max .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -280px -63px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -203px 0px;
 }
 
 .status {
@@ -557,22 +557,22 @@ body .fn-hide {
 .status-verify .icon {
     width: 16px;
     height: 12px;
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -304px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -128px -76px;
 }
 
 .status-mobile .icon {
     height: 13px;
     width: 10px;
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -294px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -193px -55px;
 }
 
 .status-mobile-otp .icon {
     width: 12px;
     height: 12px;
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -368px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -144px -76px;
 }
 
 .my-payment li {
@@ -588,38 +588,38 @@ body .fn-hide {
 }
 
 .my-payment-more .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -320px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -92px -76px;
 }
 
 .my-payment-zht .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -332px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -104px -76px;
 }
 
 .my-payment-jj .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -344px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -116px -76px;
 }
 
 .my-payment-wkyhj .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -356px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -3px -76px;
 }
 
 .my-payment-yhk .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -369px -51px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -203px -11px;
 }
 
 .my-payment-jfb .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -380px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -156px -76px;
 }
 
 .my-payment-hb .icon {
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -203px -51px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -168px -76px;
 }
 
 .tmall {
@@ -629,12 +629,12 @@ body .fn-hide {
 }
 
 .tmall h1 {
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     height: 26px;
     width: 189px;
     text-indent: -9999px;
     margin: 10px;
-    background-position: -203px 0px;
+    background-position: 0px -156px;
 }
 
 .list {
@@ -654,23 +654,23 @@ body .fn-hide {
 }
 
 .list .fav-icon {
-    background-position: -5px -65px;
-    background-image: url(../images/sprite-1352441239312.png);
+    background-position: -5px -24px;
+    background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
 }
 
 .list .gou-icon {
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
     background-position: -5px -2px;
 }
 
 .list .phone-icon {
-    background-image: url(../images/sprite-1352441239312.png);
+    background-image: url(../images/sprite-peaches.png);
     height: 14px;
     width: 10px;
     display: inline-block;
-    background-position: -284px -26px;
+    background-position: -193px -41px;
 }
 
 .brandFlyer {
@@ -684,8 +684,8 @@ body .fn-hide {
     height: 20px;
     left: 0px;
     top: -1px;
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: -264px -26px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -156px -123px;
 }
 
 .btn-cart {
@@ -693,6 +693,12 @@ body .fn-hide {
     text-indent: -9999px;
     width: 66px;
     height: 31px;
-    background-image: url(../images/sprite-1352441239312.png);
-    background-position: left -261px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: left -264px;
+}
+
+.source-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
 }

@@ -196,7 +196,7 @@
 }
 
 .list .gou-icon {
-    background: url(http://img03.taobaocdn.com/tps/i3/T1cQrVXntgXXap7Fvh-200-41.png?kkk) no-repeat -2px -2px;
+    background: url(http://img03.taobaocdn.com/tps/i3/T1cQrVXntgXXap7Fvh-200-41.png) no-repeat -2px -2px;
 }
 
 .list .phone-icon {
@@ -227,4 +227,9 @@
     text-indent: -9999px;
     width: auto;
     height: auto;
+}
+.source-list{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
 }
