@@ -14,7 +14,7 @@ Peaches
     * 现在你只要关心单个元素的背景图片，不用再担心因为修改图片影响其他功能了。
     * 一个复杂的sprite图片举例：[https://i.alipayobjects.com/e/201112/1k1a4oNien.png](https://i.alipayobjects.com/e/201112/1k1a4oNien.png)
 
-一个使用 **Peaches** 书写样式的例子:[点击这里](http://sliuqin.github.com/Peaches/example/index.html)
+一个使用 **Peaches** 书写样式的例子:[点击这里](http://sliuqin.github.com/peaches/example/index.html)
 
 ## 安装
     npm install peaches
