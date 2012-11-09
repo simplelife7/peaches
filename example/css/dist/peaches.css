@@ -1,0 +1,704 @@
+@charset "utf-8";
+
+html {
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    margin: 0;
+    padding: 0;
+}
+
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 500;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+    font-size: 100%;
+}
+
+textarea {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+    font-size: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+th {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+aside {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+details {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+figcaption {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+hgroup {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+audio {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+canvas {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+select {
+    font: 12px/1.5 tahoma,arial,\5b8b\4f53;
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+}
+
+iframe {
+    display: block;
+}
+
+abbr {
+    border: 0;
+    font-variant: normal;
+}
+
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+address {
+    font-style: normal;
+    font-weight: 500;
+}
+
+caption {
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+}
+
+cite {
+    font-style: normal;
+    font-weight: 500;
+}
+
+dfn {
+    font-style: normal;
+    font-weight: 500;
+}
+
+em {
+    font-style: normal;
+    font-weight: 500;
+}
+
+var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+q:before {
+    content: '';
+}
+
+q:after {
+    content: '';
+}
+
+sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    bottom: -0.25em;
+}
+
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ins {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.fn-clear {
+    zoom: 1;
+}
+
+body .fn-hide {
+    display: none;
+}
+
+.fn-left {
+    display: inline;
+    float: left;
+}
+
+.fn-right {
+    display: inline;
+    float: right;
+}
+
+.ui-button {
+    cursor: pointer;
+    display: inline-block;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+}
+
+.ui-button-lorange {
+    background-image: url(../images/sprite-peaches.png);
+    background-repeat: no-repeat;
+    height: 35px;
+    background-position: -3px -41px;
+}
+
+.ui-button-lorange .ui-button-text {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: right -194px;
+    background-repeat: no-repeat;
+    padding: 7px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ui-button-llight {
+    background-image: url(../images/sprite-peaches.png);
+    background-repeat: no-repeat;
+    height: 35px;
+    background-position: 0px -88px;
+}
+
+.ui-button-llight .ui-button-text {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: right -229px;
+    background-repeat: no-repeat;
+    padding: 7px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #595959;
+}
+
+.container {
+    width: 990px;
+    margin: 10px auto;
+}
+
+.global-header {
+    position: relative;
+}
+
+.global-logo {
+    width: 95px;
+    height: 33px;
+    text-indent: -9999px;
+    display: inline-block;
+    background-image: url(../images/sprite-peaches.png);
+    background-repeat: no-repeat;
+    background-position: 0px -123px;
+}
+
+.safeguard {
+    display: inline-block;
+    background-image: url(../images/sprite-peaches.png);
+    width: 61px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    background-position: -95px -123px;
+}
+
+.separator {
+    width: 3px;
+    height: 88px;
+    position: relative;
+    top: 50%;
+    margin-top: -44px;
+    background-image: url(../images/sprite-peaches.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-color: #ccc;
+}
+
+.user-info {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    height: 128px;
+    background-color: #f7f7f7;
+}
+
+.user-info-block {
+    width: 33%;
+    height: 100%;
+    position: relative;
+}
+
+.my-assets {
+    margin: 10px;
+}
+
+.my-account {
+    margin: 10px;
+}
+
+.my-payment {
+    margin: 10px;
+}
+
+.ui-securelevel .icon {
+    height: 11px;
+    width: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.ui-securelevel-high {
+    color: #5AAB04;
+    font-weight: bold;
+}
+
+.ui-securelevel-high .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: 0px -182px;
+}
+
+.ui-securelevel-low {
+    color: #f16024;
+    font-weight: bold;
+}
+
+.ui-securelevel-low .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -77px -182px;
+}
+
+.ui-securelevel-medium {
+    color: #efc342;
+    font-weight: bold;
+}
+
+.ui-securelevel-medium .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -15px -76px;
+}
+
+.ui-securelevel-max {
+    color: #5AAB04;
+    font-weight: bold;
+}
+
+.ui-securelevel-max .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -203px 0px;
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.status li {
+    float: left;
+    margin-right: 10px;
+}
+
+.status .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.status-verify .icon {
+    width: 16px;
+    height: 12px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -128px -76px;
+}
+
+.status-mobile .icon {
+    height: 13px;
+    width: 10px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -193px -55px;
+}
+
+.status-mobile-otp .icon {
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -144px -76px;
+}
+
+.my-payment li {
+    float: left;
+    width: 50%;
+}
+
+.my-payment .icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.my-payment-more .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -92px -76px;
+}
+
+.my-payment-zht .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -104px -76px;
+}
+
+.my-payment-jj .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -116px -76px;
+}
+
+.my-payment-wkyhj .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -3px -76px;
+}
+
+.my-payment-yhk .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -203px -11px;
+}
+
+.my-payment-jfb .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -156px -76px;
+}
+
+.my-payment-hb .icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -168px -76px;
+}
+
+.tmall {
+    width: 100%;
+    height: 200px;
+    background-color: #b2000d;
+}
+
+.tmall h1 {
+    background-image: url(../images/sprite-peaches.png);
+    height: 26px;
+    width: 189px;
+    text-indent: -9999px;
+    margin: 10px;
+    background-position: 0px -156px;
+}
+
+.list {
+    height: 50px;
+    overflow: hidden;
+}
+
+.list li {
+    float: left;
+}
+
+.list b {
+    display: inline-block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+}
+
+.list .fav-icon {
+    background-position: -5px -24px;
+    background-image: url(../images/sprite-peaches.png);
+    background-repeat: no-repeat;
+}
+
+.list .gou-icon {
+    background-image: url(../images/sprite-peaches.png);
+    background-repeat: no-repeat;
+    background-position: -5px -2px;
+}
+
+.list .phone-icon {
+    background-image: url(../images/sprite-peaches.png);
+    height: 14px;
+    width: 10px;
+    display: inline-block;
+    background-position: -193px -41px;
+}
+
+.brandFlyer {
+    position: relative;
+    padding-left: 20px;
+}
+
+.brandFlyer b {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    top: -1px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: -156px -123px;
+}
+
+.btn-cart {
+    border: 0;
+    text-indent: -9999px;
+    width: 66px;
+    height: 31px;
+    background-image: url(../images/sprite-peaches.png);
+    background-position: left -264px;
+}
+
+.source-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
