@@ -16,3 +16,10 @@
 
 #### node-canvas的安装
 图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装[Cairo](http://cairographics.org/)。
+
+###  安装wget
+程序使用`wget`下载图片，所以请确保安装了`wget`。
+        
+        brew install wget
+
+关于brew，请[点击这里查看](http://mxcl.github.com/homebrew/)
