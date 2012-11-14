@@ -18,7 +18,7 @@ Peaches
 
 ## 安装
     npm install peaches
+    
+更多安装帮助,请[点击这里](https://github.com/sliuqin/peaches/blob/master/docs/install.md)
 
-图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装[Cairo](http://cairographics.org/)。
-
-PS: 安装暂时不可用，优化处理中。
+## 使用
