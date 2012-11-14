@@ -8,3 +8,5 @@ TODO List
 * 支持又拍云做为静态服务器
 * 支持aliyun做为静态服务器
 * 支持scp上传到静态服务器
+* windows 安装帮助
+* linux 安装帮助
