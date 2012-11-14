@@ -391,13 +391,13 @@ body .fn-hide {
 .ui-button-lorange {
     background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
-    height: 35px;
-    background-position: -3px -41px;
+    height: 0px;
+    background-position: 0px 0px;
 }
 
 .ui-button-lorange .ui-button-text {
     background-image: url(../images/sprite-peaches.png);
-    background-position: right -194px;
+    background-position: right 0px;
     background-repeat: no-repeat;
     padding: 7px 20px;
     display: inline-block;
@@ -409,13 +409,13 @@ body .fn-hide {
 .ui-button-llight {
     background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
-    height: 35px;
-    background-position: 0px -88px;
+    height: 0px;
+    background-position: 0px 0px;
 }
 
 .ui-button-llight .ui-button-text {
     background-image: url(../images/sprite-peaches.png);
-    background-position: right -229px;
+    background-position: right 0px;
     background-repeat: no-repeat;
     padding: 7px 20px;
     display: inline-block;
@@ -440,7 +440,7 @@ body .fn-hide {
     display: inline-block;
     background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
-    background-position: 0px -123px;
+    background-position: 0px 0px;
 }
 
 .safeguard {
@@ -451,7 +451,7 @@ body .fn-hide {
     position: absolute;
     top: 0;
     left: 100px;
-    background-position: -95px -123px;
+    background-position: 0px 0px;
 }
 
 .separator {
@@ -506,7 +506,7 @@ body .fn-hide {
 
 .ui-securelevel-high .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: 0px -182px;
+    background-position: 0px 0px;
 }
 
 .ui-securelevel-low {
@@ -516,7 +516,7 @@ body .fn-hide {
 
 .ui-securelevel-low .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -77px -182px;
+    background-position: 0px 0px;
 }
 
 .ui-securelevel-medium {
@@ -526,7 +526,7 @@ body .fn-hide {
 
 .ui-securelevel-medium .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -15px -76px;
+    background-position: 0px 0px;
 }
 
 .ui-securelevel-max {
@@ -536,7 +536,7 @@ body .fn-hide {
 
 .ui-securelevel-max .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -203px 0px;
+    background-position: 0px 0px;
 }
 
 .status {
@@ -555,24 +555,24 @@ body .fn-hide {
 }
 
 .status-verify .icon {
-    width: 16px;
-    height: 12px;
+    width: 0px;
+    height: 0px;
     background-image: url(../images/sprite-peaches.png);
-    background-position: -128px -76px;
+    background-position: 0px 0px;
 }
 
 .status-mobile .icon {
-    height: 13px;
-    width: 10px;
+    height: 0px;
+    width: 0px;
     background-image: url(../images/sprite-peaches.png);
-    background-position: -193px -55px;
+    background-position: 0px 0px;
 }
 
 .status-mobile-otp .icon {
-    width: 12px;
-    height: 12px;
+    width: 0px;
+    height: 0px;
     background-image: url(../images/sprite-peaches.png);
-    background-position: -144px -76px;
+    background-position: 0px 0px;
 }
 
 .my-payment li {
@@ -589,37 +589,37 @@ body .fn-hide {
 
 .my-payment-more .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -92px -76px;
+    background-position: 0px 0px;
 }
 
 .my-payment-zht .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -104px -76px;
+    background-position: 0px 0px;
 }
 
 .my-payment-jj .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -116px -76px;
+    background-position: 0px 0px;
 }
 
 .my-payment-wkyhj .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -3px -76px;
+    background-position: 0px 0px;
 }
 
 .my-payment-yhk .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -203px -11px;
+    background-position: 0px 0px;
 }
 
 .my-payment-jfb .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -156px -76px;
+    background-position: 0px 0px;
 }
 
 .my-payment-hb .icon {
     background-image: url(../images/sprite-peaches.png);
-    background-position: -168px -76px;
+    background-position: 0px 0px;
 }
 
 .tmall {
@@ -630,11 +630,11 @@ body .fn-hide {
 
 .tmall h1 {
     background-image: url(../images/sprite-peaches.png);
-    height: 26px;
-    width: 189px;
+    height: 0px;
+    width: 0px;
     text-indent: -9999px;
     margin: 10px;
-    background-position: 0px -156px;
+    background-position: 0px 0px;
 }
 
 .list {
@@ -654,7 +654,7 @@ body .fn-hide {
 }
 
 .list .fav-icon {
-    background-position: -5px -24px;
+    background-position: -2px -24px;
     background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
 }
@@ -662,15 +662,15 @@ body .fn-hide {
 .list .gou-icon {
     background-image: url(../images/sprite-peaches.png);
     background-repeat: no-repeat;
-    background-position: -5px -2px;
+    background-position: -2px -2px;
 }
 
 .list .phone-icon {
     background-image: url(../images/sprite-peaches.png);
-    height: 14px;
-    width: 10px;
+    height: 0px;
+    width: 0px;
     display: inline-block;
-    background-position: -193px -41px;
+    background-position: 0px 0px;
 }
 
 .brandFlyer {
@@ -680,21 +680,21 @@ body .fn-hide {
 
 .brandFlyer b {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 0px;
+    height: 0px;
     left: 0px;
     top: -1px;
     background-image: url(../images/sprite-peaches.png);
-    background-position: -156px -123px;
+    background-position: 0px 0px;
 }
 
 .btn-cart {
     border: 0;
     text-indent: -9999px;
-    width: 66px;
-    height: 31px;
+    width: 0px;
+    height: 0px;
     background-image: url(../images/sprite-peaches.png);
-    background-position: left -264px;
+    background-position: left 0px;
 }
 
 .source-list {
