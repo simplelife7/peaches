@@ -1,0 +1,89 @@
+//#!/usr/bin/env node
+
+var path = require('path'),
+    fs = require('fs'),
+    program = require('commander'),
+    pkg = require('../package.json'),
+    version = pkg.version,
+    peaches = require('../lib/peaches'),
+    logger = require('nlogger').logger('peaches'),
+    cli = require('../lib/cli');
+
+program
+    .version(version)
+    .option('bulid', '编译项目')
+    .option('deploy', '编译并发布项目,主要用于自动上传图片到线上服务器')
+    .option('-p, --pkg <package.json>', '设置package.json的路径,默认使用当前目录下的package.json')
+    .option('--encoding <encoding>', '指定在进行文件处理时，涉及到的文件编码。 默认是 utf8 ')
+    .option('-r, --autoReload', '设置是否根据文件的变更自动编译。默认为 false')
+    .parse(process.argv);
+
+if (!program.pkg) {
+    program.pkg = './package.json';
+}
+if (!program.src) {
+    program.src = './src';
+}
+if (!program.encoding) {
+    program.encoding = 'utf-8';
+}
+if (!program.hasOwnProperty('autoReload')) {
+    program.autoReload = false;
+}
+
+/**
+ * 读取打包配置
+ * 读取package.json文件,位于脚本执行的目录下.
+ * 关于package.json的详细说明: docs/package.json.md;
+ * @return {Object} package
+ */
+function loadConfig(pkg) {
+    "use strict";
+    //如果没有输入pkg配置的路径,那么查找当前路径中是否又package.json
+    pkg = pkg || './package.json';
+    var config;
+    try {
+        config = fs.readFileSync(pkg);
+    } catch (e) {
+        logger.error('无法读取package.json，系统退出！');
+        process.exit(1);
+    }
+    try {
+        config = JSON.parse(config);
+    } catch (ex) {
+        logger.error('package.json 定义似乎有问题,检查一下!');
+        process.exit(1);
+    }
+    return config;
+}
+var config = loadConfig(program.pkg),
+    servers = config.server,
+    baseDir = path.dirname(program.pkg),
+    config = loadConfig(program.pkg),
+    i, o, dist, len;
+
+
+if (program.bulid) {
+    config.server = servers.develop;
+}
+else if (program.deploy) {
+    config.server = servers.deploy;
+}
+// 转化为绝对路径 开始..
+config.server.root = path.join(baseDir, config.server.root);
+config.server.temp = path.join(baseDir, config.server.temp);
+
+var output2 = {};
+for (o in config.output) {
+    if (config.output.hasOwnProperty(o)) {
+        dist = path.join(baseDir, o);
+        output2[dist] = [];
+        config.output[o].forEach(function (src) {
+            output2[dist].push(path.join(baseDir, src));
+        });
+    }
+}
+config.output = output2;
+// 转化为绝对路径 结束..
+
+cli.main(config);

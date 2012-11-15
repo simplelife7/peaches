@@ -1,9 +1,4 @@
 {
-    "name": "Peaches",
-    "root": ".",
-    "version": "0.0.1",
-    "dependencies": {
-    },
     "images": "./images",
     "output": {
         "./dist/peaches.css": [
@@ -14,5 +9,18 @@
         "./dist/test.css": [
             "./src/test.css"
         ]
+    },
+    "server": {
+        "develop": {
+            "name": "local",
+            "root": "./images",
+            "temp": "./images",
+            "baseURI": "../images/"
+        },
+        "deploy": {
+            "name": "upyun",
+            "username": "",
+            "password": ""
+        }
     }
 }
