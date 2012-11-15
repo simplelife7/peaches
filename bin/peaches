@@ -37,13 +37,12 @@ if (!program.hasOwnProperty('autoReload')) {
  * 关于package.json的详细说明: docs/package.json.md;
  * @return {Object} package
  */
-function loadConfig(pkg) {
+function loadConfig() {
     "use strict";
     //如果没有输入pkg配置的路径,那么查找当前路径中是否又package.json
-    pkg = pkg || './package.json';
     var config;
     try {
-        config = fs.readFileSync(pkg);
+        config = fs.readFileSync(program.pkg);
     } catch (e) {
         logger.error('无法读取package.json，系统退出！');
         process.exit(1);
@@ -54,58 +53,93 @@ function loadConfig(pkg) {
         logger.error('package.json 定义似乎有问题,检查一下!');
         process.exit(1);
     }
+    var servers = config.server,
+        baseDir = path.dirname(program.pkg),
+        o, dist;
+
+    if (program.build) {
+        config.server = servers.build;
+    }
+    else if (program.deploy) {
+        config.server = servers.deploy;
+    }
+// 如果没有输入 build 和 deploy 那么使用 build方式处理。
+    else {
+        config.server = servers.build;
+    }
+// 转化为绝对路径 开始..
+    config.server.root = path.join(baseDir, config.server.root + '/');
+    config.server.tmp = path.join(baseDir, config.server.tmp + '/');
+    if (!fs.existsSync(config.server.root)) {
+        try {
+            fs.mkdirSync(config.server.root);
+        }
+        catch (e) {
+            logger.error('无法创建目录：{}', config.server.root);
+            process.exit(1);
+        }
+    }
+    if (!fs.existsSync(config.server.tmp)) {
+        try {
+            fs.mkdirSync(config.server.tmp);
+        }
+        catch (e) {
+            logger.error('无法创建目录：{}', config.server.tmp);
+            process.exit(1);
+        }
+    }
+
+    var output2 = {};
+    for (o in config.output) {
+        if (config.output.hasOwnProperty(o)) {
+            dist = path.join(baseDir, o);
+            output2[dist] = [];
+            config.output[o].forEach(function (src) {
+                output2[dist].push(path.join(baseDir, src));
+            });
+        }
+    }
+    config.output = output2;
+    // 转化为绝对路径 结束..
     return config;
 }
-var config = loadConfig(program.pkg),
-    servers = config.server,
-    baseDir = path.dirname(program.pkg),
-    config = loadConfig(program.pkg),
-    i, o, dist, len;
 
-
-if (program.build) {
-    config.server = servers.build;
-}
-else if (program.deploy) {
-    config.server = servers.deploy;
-}
-// 如果没有输入 build 和 deploy 那么使用 build方式处理。
-else{
-    config.server = servers.build;
-}
-// 转化为绝对路径 开始..
-config.server.root = path.join(baseDir, config.server.root + '/');
-config.server.tmp = path.join(baseDir, config.server.tmp + '/');
-if(!fs.existsSync(config.server.root)){
-    try{
-        fs.mkdirSync(config.server.root);
-    }
-    catch(e){
-        logger.error('无法创建目录：{}',config.server.root);
-        process.exit(1);
+var config = loadConfig(),
+    watchFileList = [];
+// 当CSS文件变更是，自动编译 开始。。。
+function watchFile(curr, prev) {
+    if (curr.mtime.getTime() !== prev.mtime.getTime()) {
+        cli.main(config);
     }
 }
-if(!fs.existsSync(config.server.tmp)){
-    try{
-        fs.mkdirSync(config.server.tmp);
-    }
-    catch(e){
-        logger.error('无法创建目录：{}',config.server.tmp);
-        process.exit(1);
+function watchOutput() {
+    for (var o in config.output) {
+        if (config.output.hasOwnProperty(o)) {
+            config.output[o].forEach(function (cssFile) {
+                watchFileList.push(cssFile);
+                fs.watchFile(cssFile, watchFile);
+            });
+        }
     }
 }
 
-var output2 = {};
-for (o in config.output) {
-    if (config.output.hasOwnProperty(o)) {
-        dist = path.join(baseDir, o);
-        output2[dist] = [];
-        config.output[o].forEach(function (src) {
-            output2[dist].push(path.join(baseDir, src));
-        });
-    }
+if (program.autoReload) {
+    watchOutput();
+
+    fs.watchFile(program.pkg, function (curr, prev) {
+        if (curr.mtime.getTime() !== prev.mtime.getTime()) {
+            config = loadConfig();
+            cli.main(config);
+            
+            watchFileList.forEach(function (file) {
+                fs.unwatchFile(file, watchFile);
+            });
+            watchFileList = [];
+            watchOutput();
+        }
+    });
 }
-config.output = output2;
-// 转化为绝对路径 结束..
+// 当CSS文件变更是，自动编译 结束。。。
+
 
 cli.main(config);
