@@ -69,9 +69,31 @@ if (program.build) {
 else if (program.deploy) {
     config.server = servers.deploy;
 }
+// 如果没有输入 build 和 deploy 那么使用 build方式处理。
+else{
+    config.server = servers.build;
+}
 // 转化为绝对路径 开始..
-config.server.root = path.join(baseDir, config.server.root);
-config.server.temp = path.join(baseDir, config.server.temp);
+config.server.root = path.join(baseDir, config.server.root + '/');
+config.server.tmp = path.join(baseDir, config.server.tmp + '/');
+if(!fs.existsSync(config.server.root)){
+    try{
+        fs.mkdirSync(config.server.root);
+    }
+    catch(e){
+        logger.error('无法创建目录：{}',config.server.root);
+        process.exit(1);
+    }
+}
+if(!fs.existsSync(config.server.tmp)){
+    try{
+        fs.mkdirSync(config.server.tmp);
+    }
+    catch(e){
+        logger.error('无法创建目录：{}',config.server.tmp);
+        process.exit(1);
+    }
+}
 
 var output2 = {};
 for (o in config.output) {

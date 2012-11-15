@@ -1,5 +1,4 @@
 {
-    "images": "./images",
     "output": {
         "./dist/peaches.css": [
             "./src/base.css",
@@ -14,7 +13,7 @@
         "build": {
             "name": "local",
             "root": "./images",
-            "temp": "./images",
+            "tmp": "./tmp",
             "baseURI": "../images/"
         },
         "deploy": {
