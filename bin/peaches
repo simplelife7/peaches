@@ -11,7 +11,7 @@ var path = require('path'),
 
 program
     .version(version)
-    .option('bulid', '编译项目')
+    .option('build', '编译项目')
     .option('deploy', '编译并发布项目,主要用于自动上传图片到线上服务器')
     .option('-p, --pkg <package.json>', '设置package.json的路径,默认使用当前目录下的package.json')
     .option('--encoding <encoding>', '指定在进行文件处理时，涉及到的文件编码。 默认是 utf8 ')
