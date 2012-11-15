@@ -22,3 +22,10 @@ Peaches
 更多安装帮助,请[点击这里](https://github.com/sliuqin/peaches/blob/master/docs/install.md)
 
 ## 使用
+在命令行中执行
+        
+        peaches bulid
+ 
+ 更多参数,请[点击查看这里](https://github.com/sliuqin/peaches/blob/master/docs/命令行参数.md)      
+       
+  

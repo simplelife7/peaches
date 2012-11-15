@@ -10,3 +10,5 @@ TODO List
 * 支持scp上传到静态服务器
 * windows 安装帮助
 * linux 安装帮助
+* 更新logger模块,去掉配置文件的方式
+* 命令行工具支持调试信息打印

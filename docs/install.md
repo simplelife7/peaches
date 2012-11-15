@@ -14,6 +14,8 @@
        
 当然你的npm bin 可能不在`/usr/local/share/npm/bin/`中，但你应该明白我的意思了。
 
+配置完成之后，记得使用`source ~/.bash_profile`来激活刚才的配置。
+
 #### node-canvas的安装
 图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装[Cairo](http://cairographics.org/)。
 

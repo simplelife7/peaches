@@ -63,8 +63,8 @@ var config = loadConfig(program.pkg),
     i, o, dist, len;
 
 
-if (program.bulid) {
-    config.server = servers.develop;
+if (program.build) {
+    config.server = servers.build;
 }
 else if (program.deploy) {
     config.server = servers.deploy;
