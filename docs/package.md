@@ -17,7 +17,7 @@ package.json
         "build": {
             "name": "local",
             "root": "./images",
-            "temp": "./images",
+            "tmp": "./images",
             "baseURI": "../images/"
         },
         "deploy": {
