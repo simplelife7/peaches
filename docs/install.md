@@ -17,7 +17,13 @@
 配置完成之后，记得使用`source ~/.bash_profile`来激活刚才的配置。
 
 #### node-canvas的安装
-图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装[Cairo](http://cairographics.org/)。
+图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装`node-canvas`。
+
+node-canvas 的安装文档如下：
+* [Installation - OSX](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
+* [Installation Ubuntu](https://github.com/LearnBoost/node-canvas/wiki/Installation---Ubuntu)
+* [Installation Windows](https://github.com/LearnBoost/node-canvas/wiki/Installation---Windows)
+* [Installation Heroku](https://github.com/LearnBoost/node-canvas/wiki/Installation-Heroku)
 
 ###  安装wget
 程序使用`wget`下载图片，所以请确保安装了`wget`。
