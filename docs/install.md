@@ -20,7 +20,7 @@
 图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装`node-canvas`。
 
 node-canvas 的安装文档如下：
-* [Installation - OSX](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
+* [Installation OSX](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
 * [Installation Ubuntu](https://github.com/LearnBoost/node-canvas/wiki/Installation---Ubuntu)
 * [Installation Windows](https://github.com/LearnBoost/node-canvas/wiki/Installation---Windows)
 * [Installation Heroku](https://github.com/LearnBoost/node-canvas/wiki/Installation-Heroku)
