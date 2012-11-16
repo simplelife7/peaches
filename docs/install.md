@@ -21,9 +21,8 @@
 
 node-canvas 的安装文档如下：
 * [Installation OSX](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
-* [Installation Ubuntu](https://github.com/LearnBoost/node-canvas/wiki/Installation---Ubuntu)
-* [Installation Windows](https://github.com/LearnBoost/node-canvas/wiki/Installation---Windows)
-* [Installation Heroku](https://github.com/LearnBoost/node-canvas/wiki/Installation-Heroku)
+
+注意原文档中的这句话：“Note; if libpng fails try [installing this binary](http://ethan.tira-thompson.com/Mac_OS_X_Ports.html)”
 
 ###  安装wget
 程序使用`wget`下载图片，所以请确保安装了`wget`。
