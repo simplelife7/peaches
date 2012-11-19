@@ -1,0 +1,758 @@
+html {
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    margin: 0;
+    padding: 0;
+}
+
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 500;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53;
+    font-size: 100%;
+    line-height: normal;
+}
+
+textarea {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53;
+    font-size: 100%;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+th {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-style: normal;
+    font-weight: 500;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53;
+    line-height: normal;
+}
+
+article {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+aside {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+details {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+figcaption {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+hgroup {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+audio {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+canvas {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+select {
+    font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53;
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border: 0;
+}
+
+iframe {
+    display: block;
+}
+
+abbr {
+    border: 0;
+    font-variant: normal;
+}
+
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+address {
+    font-style: normal;
+    font-weight: 500;
+}
+
+caption {
+    font-style: normal;
+    font-weight: 500;
+    text-align: left;
+}
+
+cite {
+    font-style: normal;
+    font-weight: 500;
+}
+
+dfn {
+    font-style: normal;
+    font-weight: 500;
+}
+
+em {
+    font-style: normal;
+    font-weight: 500;
+}
+
+var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+q:before {
+    content: '';
+}
+
+q:after {
+    content: '';
+}
+
+sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    bottom: -0.25em;
+}
+
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ins {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.fn-clear {
+    zoom: 1;
+}
+
+body .fn-hide {
+    display: none;
+}
+
+.fn-left {
+    display: inline;
+    float: left;
+}
+
+.fn-right {
+    display: inline;
+    float: right;
+}
+
+.fn-hidetext {
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.ui-xbox {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    left: 50%;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 6px;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+}
+
+.ui-xbox-action {
+    position: absolute;
+    top: 16px;
+    display: block;
+    right: 16px;
+    z-index: 10;
+}
+
+:root .ui-xbox {
+    FILTER: none\9;
+}
+
+.ui-xbox-content {
+    height: 100%;
+    *zoom: 1;
+    background-color: #fff;
+}
+
+.ui-xbox-close {
+    color: #999;
+    font-family: tahoma;
+    font-size: 24px;
+    line-height: 14px;
+    height: 18px;
+    width: 18px;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+}
+
+.ui-xbox-close:hover {
+    color: #777;
+}
+
+.ui-xbox-mask {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    -moz-opacity: 0.2;
+    background-color: black;
+}
+
+.ui-button {
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    overflow: visible;
+    cursor: pointer;
+    font-family: verdana, Hiragino Sans GB;
+}
+
+div.ui-button {
+    *display: inline;
+}
+
+p.ui-button {
+    *display: inline;
+}
+
+span.ui-button {
+    *display: inline;
+}
+
+.ui-button-text {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    overflow: visible;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ui-button a.ui-button-text:hover {
+    text-decoration: none;
+}
+
+input.ui-button-text {
+    *vertical-align: top;
+    font-family: Hiragino Sans GB;
+}
+
+button.ui-button-text {
+    *vertical-align: top;
+    font-family: Hiragino Sans GB;
+}
+
+.ui-button-lorange {
+    color: #fff;
+    background-image: url(../images/sprite-i.png);
+    background-position: -3px 0px;
+}
+
+.ui-button-lorange .ui-button-text {
+    color: #fff;
+    padding: 0 20px;
+    background-position: right -175px;
+    line-height: 35px;
+    height: 35px;
+    background-image: url(../images/sprite-i.png);
+    background-color: transparent;
+}
+
+.ui-button-lorange:hover {
+    background-image: url(../images/sprite-i.png);
+    background-position: -3px -35px;
+}
+
+.ui-button-lorange:hover .ui-button-text {
+    background-position: right -210px;
+    background-image: url(../images/sprite-i.png);
+    background-color: transparent;
+}
+
+.ui-button-morange {
+    color: #fff;
+    background-image: url(../images/sprite-i.png);
+    background-position: 0px -88px;
+}
+
+.ui-button-morange:hover {
+    background-image: url(../images/sprite-i.png);
+    background-position: 0px -119px;
+}
+
+.ui-button-morange .ui-button-text {
+    color: #fff;
+    padding: 0 22px;
+    background-position: right -245px;
+    line-height: 31px;
+    height: 31px;
+    background-image: url(../images/sprite-i.png);
+    background-color: transparent;
+}
+
+.ui-button-morange:hover .ui-button-text {
+    background-position: right -276px;
+    background-image: url(../images/sprite-i.png);
+    background-color: transparent;
+}
+
+.ui-button-sorange {
+    color: #fff;
+    background-image: url(../images/sprite-i.png);
+    background-position: 0px -150px;
+}
+
+.ui-button-sorange:hover {
+    background-image: url(../images/sprite-i.png);
+    background-position: -193px 0px;
+}
+
+.ui-button-sorange .ui-button-text {
+    color: #fff;
+    padding: 0 12px;
+    font-size: 12px;
+    background-position: right -307px;
+    line-height: 25px;
+    height: 25px;
+    background-image: url(../images/sprite-i.png);
+    background-color: transparent;
+}
+
+.ui-button-sorange:hover .ui-button-text {
+    background-position: right -332px;
+    background-image: url(../images/sprite-i.png);
+    background-color: transparent;
+}
+
+.ui-container {
+    height: auto;
+    margin: 0 auto;
+    width: 990px;
+}
+
+.safeguard {
+    display: inline-block;
+    background-image: url(../images/sprite-i.png);
+    width: 61px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    background-position: -193px -25px;
+}
+
+.separator {
+    width: 3px;
+    height: 88px;
+    position: relative;
+    top: 50%;
+    margin-top: -44px;
+    background-image: url(../images/sprite-i.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-color: #ccc;
+}
+
+.user-info {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    height: 128px;
+    background-color: #f7f7f7;
+}
+
+.user-info-block {
+    width: 33%;
+    height: 100%;
+    position: relative;
+}
+
+.my-assets {
+    margin: 10px;
+}
+
+.my-account {
+    margin: 10px;
+}
+
+.my-payment {
+    margin: 10px;
+}
+
+.ui-securelevel .icon {
+    height: 11px;
+    width: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.ui-securelevel-high {
+    color: #5AAB04;
+    font-weight: bold;
+}
+
+.ui-securelevel-high .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -254px -38px;
+}
+
+.ui-securelevel-low {
+    color: #f16024;
+    font-weight: bold;
+}
+
+.ui-securelevel-low .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -217px -50px;
+}
+
+.ui-securelevel-medium {
+    color: #efc342;
+    font-weight: bold;
+}
+
+.ui-securelevel-medium .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -276px -25px;
+}
+
+.ui-securelevel-max {
+    color: #5AAB04;
+    font-weight: bold;
+}
+
+.ui-securelevel-max .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -294px -50px;
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.status li {
+    float: left;
+    margin-right: 10px;
+}
+
+.status .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.status-verify .icon {
+    width: 16px;
+    height: 12px;
+    background-image: url(../images/sprite-i.png);
+    background-position: -365px -25px;
+}
+
+.status-mobile .icon {
+    height: 13px;
+    width: 10px;
+    background-image: url(../images/sprite-i.png);
+    background-position: -254px -25px;
+}
+
+.status-mobile-otp .icon {
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/sprite-i.png);
+    background-position: -331px -38px;
+}
+
+.my-payment li {
+    float: left;
+    width: 50%;
+}
+
+.my-payment .icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.my-payment-more .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -343px -38px;
+}
+
+.my-payment-zht .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -355px -38px;
+}
+
+.my-payment-yfk .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -367px -38px;
+}
+
+.my-payment-jj .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -193px -50px;
+}
+
+.my-payment-wkyhj .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -205px -50px;
+}
+
+.my-payment-yhk .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -371px -50px;
+}
+
+.my-payment-jfb .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -264px -25px;
+}
+
+.my-payment-hb .icon {
+    background-image: url(../images/sprite-i.png);
+    background-position: -353px -25px;
+}
