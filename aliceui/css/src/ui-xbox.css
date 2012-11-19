@@ -1,0 +1,65 @@
+/*
+    @name: ui-xbox
+    @desc: xbox
+    @note: 自适应
+    @example: 
+    <!-- xbox -->             
+    <div class="ui-xbox">
+        <div class="ui-xbox-action"><a href="#" class="ui-xbox-close" title="关闭">×</a></div>
+        <!-- xbox content -->
+        <div class="ui-xbox-content">
+        content...
+        </div>
+        <!-- /xbox content -->
+    </div>
+    <!-- /xbox -->
+ */
+.ui-xbox,
+.ui-xbox-action {
+    position:absolute;
+    top:0;
+}
+.ui-xbox {
+    z-index:999;
+    left:50%;
+    top:50%;
+    width:500px;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding:6px;
+    FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000, endColorstr=#88000000);
+    
+}
+:root .ui-xbox {
+    FILTER:none\9;
+}
+.ui-xbox-action{
+    display:block;
+    right:16px;
+    top:16px;
+    z-index:10;
+}
+.ui-xbox-content{
+    background: #fff;
+    height: 100%;
+    *zoom:1;
+}
+.ui-xbox-close {
+    color: #999;
+    font-family: tahoma;
+    font-size: 24px;
+    line-height: 14px;
+    height:18px;
+    width:18px;
+    text-decoration: none;
+    display:block;
+    overflow:hidden;
+}
+.ui-xbox-close:hover {
+    color: #777;
+}
+.ui-xbox-mask{
+    opacity: 0.2;
+    filter:alpha(opacity=20);
+    -moz-opacity:0.2;
+    background: black;
+}

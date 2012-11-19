@@ -1,0 +1,56 @@
+/**
+ * @name:       按钮（通用）ui-button
+ * @author:     展新（zhanxin.lin@alipay.com）
+ * @example:
+ * 外层可以是 div, p, a, span 标签
+ * 里层可以是 a, input, button
+ * div > a
+ * <div class="ui-button ui-button-sorange">
+ *    <a class="ui-button-text">确定</a>
+ * </div>
+ *
+ * div > input
+ * <div class="ui-button ui-button-sorange">
+ *    <input type="button" class="ui-button-text" value="确定" />
+ * </div>
+ *
+ * a > input
+ * <a class="ui-button ui-button-sorange">
+ *    <span class="ui-button-text">确定</span>
+ * </a>
+ */
+
+.ui-button {
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    overflow: visible;
+    cursor: pointer;
+    font-family: verdana, Hiragino Sans GB;
+}
+ 
+div.ui-button, p.ui-button, span.ui-button {
+    *display: inline;/* for ie6 */
+}
+ 
+.ui-button-text {
+    display: inline-block;
+    *display: inline;/* for ie */
+    *zoom: 1;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    overflow: visible;
+    font-size: 14px;
+    font-weight: 700;
+}
+.ui-button a.ui-button-text:hover {
+    text-decoration: none;
+}
+input.ui-button-text, button.ui-button-text {
+    *vertical-align: top; /* for a ie7 bug */
+    font-family: Hiragino Sans GB;
+}

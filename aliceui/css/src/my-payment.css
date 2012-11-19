@@ -1,0 +1,46 @@
+/**
+* 用户信息： 其它资产
+*/
+.my-payment li {
+    float: left;
+    width: 50%;
+}
+
+.my-payment .icon {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.my-payment-more .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1al7zTVht6.png);
+}
+
+.my-payment-zht .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1alAewHJ3s.png);
+}
+
+.my-payment-yfk .icon{
+    background-image: url(https://i.alipayobjects.com/e/201211/1fdXdQ6DaG.png);
+}
+
+.my-payment-jj .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1alBjWxvsa.png);
+}
+
+.my-payment-wkyhj .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1alDMPXSBQ.png);
+}
+
+.my-payment-yhk .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1alIVoWihw.png);
+}
+
+.my-payment-jfb .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1ane4kXUiS.png);
+}
+
+.my-payment-hb .icon {
+    background-image: url(https://i.alipayobjects.com/e/201211/1anfROROto.png);
+}

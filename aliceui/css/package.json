@@ -1,7 +1,22 @@
 {
     "output": {
         "./dist/i.css": [
-            "./src/base.css"
+            "./src/base.css",
+            "./src/ui-xbox.css",
+
+            "./src/base.css",
+            "./src/button/base.css",
+            "./src/button/orange.css",
+
+            "./src/i.css",
+            "./src/user-info.css",
+            "./src/my-payment.css"
+        ],
+        "./dist/button.css": [
+            "./src/base.css",
+            "./src/button/base.css",
+            "./src/button/orange.css",
+            "./src/i.css"
         ]
     },
     "server": {
@@ -15,7 +30,7 @@
             "name": "upyun",
             "username": "peaches",
             "password": "69a:6Ke)9Va66G2x",
-            "bucket":"peaches",
+            "bucket": "peaches",
             "baseURI": "http://peaches.b0.upaiyun.com/"
         }
     }

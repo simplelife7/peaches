@@ -1,15 +1,27 @@
 {
-    "name":"Peaches",
-    "root":".",
-    "version":"0.0.1",
-    "dependencies":{
-    },
-    "images":"./images",
-    "output":{
-        "./dist/peaches.css":[
+    "output": {
+        "./dist/peaches.css": [
             "./src/base.css",
             "./src/button.css",
             "./src/index.css"
+        ],
+        "./dist/test.css": [
+            "./src/test.css"
         ]
+    },
+    "server": {
+        "build": {
+            "name": "local",
+            "root": "./images",
+            "tmp": "./tmp",
+            "baseURI": "../images/"
+        },
+        "deploy": {
+            "name": "upyun",
+            "username": "peaches",
+            "password": "69a:6Ke)9Va66G2x",
+            "bucket":"peaches",
+            "baseURI": "http://peaches.b0.upaiyun.com/"
+        }
     }
 }

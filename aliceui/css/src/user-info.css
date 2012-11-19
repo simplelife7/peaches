@@ -1,0 +1,112 @@
+.safeguard {
+    display: inline-block;
+    background-image: url('https://i.alipayobjects.com/e/201209/GXzKAiZTg.png');
+    width: 61px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+}
+
+.separator {
+    background: #ccc url('https://i.alipayobjects.com/e/201211/1ajAt9us4y.png') no-repeat 0 0;
+    width: 3px;
+    height: 88px;
+    position: relative;
+    top: 50%;
+    margin-top: -44px;
+}
+
+.user-info {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    height: 128px;
+}
+
+.user-info-block {
+    width: 33%;
+    height: 100%;
+    position: relative;
+}
+
+.my-assets, .my-account, .my-payment {
+    margin: 10px;
+}
+
+.ui-securelevel .icon {
+    height: 11px;
+    width: 77px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.ui-securelevel-high {
+    color: #5AAB04;
+    font-weight: bold;
+}
+
+.ui-securelevel-high .icon {
+    background-image: url('https://i.alipayobjects.com/e/201211/1ak79wACpY.png');
+}
+
+.ui-securelevel-low {
+    color: #f16024;
+    font-weight: bold;
+}
+
+.ui-securelevel-low .icon {
+    background-image: url('https://i.alipayobjects.com/e/201211/1ajlAXfJeu.png');
+}
+
+.ui-securelevel-medium {
+    color: #efc342;
+    font-weight: bold;
+}
+
+.ui-securelevel-medium .icon {
+    background-image: url('https://i.alipayobjects.com/e/201211/1ajlw9yrS0.png');
+}
+
+.ui-securelevel-max {
+    color: #5AAB04;
+    font-weight: bold;
+}
+
+.ui-securelevel-max .icon {
+    background-image: url('https://i.alipayobjects.com/e/201211/1ak7wrj216.png');
+}
+
+.status {
+    margin-top: 10px;
+}
+
+.status li {
+    float: left;
+    margin-right: 10px;
+}
+
+.status .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.status-verify .icon {
+    width: auto;
+    height: auto;
+    background-image: url(https://i.alipayobjects.com/e/201211/1akWQBLFXw.png);
+}
+
+.status-mobile .icon {
+    height: auto;
+    width: auto;
+    background-image: url(https://i.alipayobjects.com/e/201211/1akeG0noRo.png);
+}
+
+.status-mobile-otp .icon {
+    width: auto;
+    height: auto;
+    background-image: url(https://i.alipayobjects.com/e/201211/1akYx5Ml2a.png);
+}

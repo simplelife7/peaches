@@ -1,0 +1,68 @@
+.ui-button-lorange {
+    color: #fff;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feDiZCAo0.png);
+}
+.ui-button-lorange .ui-button-text {
+    color: #fff;
+    padding: 0 20px;
+    background-position: right 0;
+    line-height: 35px;
+    height: 35px;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feRRollLI.png);
+}
+
+.ui-button-lorange:hover {
+    background-image: url(https://i.alipayobjects.com/e/201211/1feF5L5bfo.png);
+}
+
+.ui-button-lorange:hover .ui-button-text {
+    background-position: right 0;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feYUgerAa.png);
+}
+
+.ui-button-morange {
+    color: #fff;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feHc210ke.png);
+}
+
+.ui-button-morange:hover {
+    background-image: url(https://i.alipayobjects.com/e/201211/1feJXhMFvQ.png);
+}
+
+.ui-button-morange .ui-button-text {
+    color: #fff;
+    padding: 0 22px;
+    background-position: right 0;
+    line-height: 31px;
+    height: 31px;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feTfZoGBg.png);
+}
+
+.ui-button-sorange {
+    color: #fff;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feOGlEEku.png);
+}
+
+.ui-button-sorange:hover {
+    background-image: url(https://i.alipayobjects.com/e/201211/1fePWNbsSa.png);
+}
+
+.ui-button-sorange .ui-button-text {
+    color: #fff;
+    padding: 0 12px;
+    font-size: 12px;
+    background-position: right 0;
+    line-height: 25px;
+    height: 25px;
+    background-image: url(https://i.alipayobjects.com/e/201211/1feWx839MS.png);
+}
+
+.ui-button-morange:hover .ui-button-text {
+    background-position: right 0;
+    background-image: url(https://i.alipayobjects.com/e/201211/1fea9AzpeW.png);
+}
+
+.ui-button-sorange:hover .ui-button-text {
+    background-position: right 0;
+    background-image: url(https://i.alipayobjects.com/e/201211/1febnJBKJA.png);
+}
