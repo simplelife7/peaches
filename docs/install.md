@@ -26,6 +26,7 @@
 2. 安装好 Xquartz 后，安装 [Cairo](http://www.cairographics.org/) `brew install cairo`
 3. 然后再尝试安装 `npm install node-canvas`
 4. 如果安装成功，那么恭喜你，不然还可以看下面的官方安装指南。
+
 #####【官方安装指南】
 node-canvas 的安装文档如下：
 * [Installation OSX](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
