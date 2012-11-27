@@ -28,7 +28,7 @@
 4. 如果安装成功，那么恭喜你，不然还可以看下面的官方安装指南。
 
 #####【官方安装指南】
-node-canvas 的安装文档如下：
+
 * [Installation OSX](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX)
 
 注意原文档中的这句话：“Note; if libpng fails try [installing this binary](http://ethan.tira-thompson.com/Mac_OS_X_Ports.html)”
