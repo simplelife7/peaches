@@ -168,8 +168,8 @@
 }
 
 .tmall h1 {
-    background-image: url(https://i.alipayobjects.com/e/201211/1atdKPuW9k.png);
-    height: auto;
+    background: url(https://i.alipayobjects.com/e/201211/1atdKPuW9k.png) no-repeat;
+    height: 26px;
     width: auto;
     text-indent: -9999px;
     margin: 10px;
