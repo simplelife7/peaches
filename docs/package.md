@@ -100,4 +100,7 @@ temp目录用于保存下载的图片。
 用于组装图片URL
 baseURI 返回的图片名称为: baseURI + 图片名称。
 
+### alipayobjects
+配置静态服务器插件，自动将合并后的图片文件上传到 alipay CDN，仅供内部使用，具体文档请[点击这里查看](http://doc.alipay.net/pages/viewpage.action?pageId=40307104)
+
 

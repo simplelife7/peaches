@@ -11,11 +11,10 @@
     },
     "server": {
         "build": {
-            "name": "alipayobjects",
+            "name": "local",
             "root": "./images",
-            "username":"liuqin.sheng",
             "tmp": "./tmp",
-            "baseURI": "https://i.alipayobjects.com"
+            "baseURI": "../images/"
         },
         "deploy": {
             "name": "upyun",
