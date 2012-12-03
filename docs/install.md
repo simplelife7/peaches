@@ -19,12 +19,12 @@
 配置完成之后，记得使用`source ~/.bash_profile`来激活刚才的配置。
 
 #### node-canvas的安装
-图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装`node-canvas`。
+图片合并使用[node-canvas](https://github.com/LearnBoost/node-canvas)，安装前，请确保已经正确安装`canvas`。
 
 #####【非官方安装指南】
 1. 下载 [Xquartz](http://xquartz.macosforge.org/landing/)  [XQuartz-2.7.4.dmg](http://xquartz.macosforge.org/downloads/SL/XQuartz-2.7.4.dmg)
 2. 安装好 Xquartz 后，安装 [Cairo](http://www.cairographics.org/) `brew install cairo`
-3. 然后再尝试安装 `npm install node-canvas`
+3. 然后再尝试安装 `npm install canvas`
 4. 如果安装成功，那么恭喜你，不然还可以看下面的官方安装指南。
 
 #####【官方安装指南】
