@@ -2,7 +2,7 @@
 ### 在Mac下安装
 使用`npm`一键安装: 
         
-        npm install peaches
+        npm install peaches -g
 
 注意：99%的全新安装都会失败，这是因为`node-canvas`有很多依赖，安装不成功的同学，请看下面【node-canvas的安装】。
 
