@@ -17,7 +17,7 @@
 一个使用 **Peaches** 书写样式的例子:[点击这里](http://sliuqin.github.com/peaches/example/index.html)
 
 ## 安装
-    npm install peaches
+    npm install peaches -g
     
 更多安装帮助,请[点击这里](https://github.com/sliuqin/peaches/blob/master/docs/install.md)
 
