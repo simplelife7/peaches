@@ -22,6 +22,8 @@ package.json
         },
         "deploy": {
             "name": "upyun",
+            "root": "./images",
+            "tmp": "./images",
             "username": "peaches",
             "password": "69a:6Ke)9Va66G2x",
             "bucket":"peaches",
