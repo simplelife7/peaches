@@ -1,0 +1,24 @@
+{
+    "output": {
+        "../dist/index.css": [
+            "./src/style.css"
+        ]
+    },
+    "server": {
+        "build": {
+            "name": "local",
+            "root": "./dist/",
+            "tmp": "./dist/tmp",
+            "baseURI": "http://test.peaches.net/index/static/css/dist/"
+        },
+        "deploy": {
+            "name": "upyun",
+            "root": "./images",
+            "tmp": "./images",
+            "username": "peaches",
+            "password": "69a:6Ke)9Va66G2x",
+            "bucket": "peaches",
+            "baseURI": "http://peaches.b0.upaiyun.com/"
+        }
+    }
+}
