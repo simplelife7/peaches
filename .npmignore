@@ -1,0 +1,7 @@
+.gitignore
+docs
+example
+test
+changelog.md
+nlogger.json
+todo.md
