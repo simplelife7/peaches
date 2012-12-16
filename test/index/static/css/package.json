@@ -1,7 +1,9 @@
 {
+    "format":"pnccg24",
     "output": {
-        "../dist/index.css": [
-            "./src/style.css"
+        "./dist/index.css": [
+            "./src/style.css",
+            "./src/test.css"
         ]
     },
     "server": {

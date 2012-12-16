@@ -3,6 +3,7 @@ package.json
 `package.json`提供CSS打包编译规则，可以位于CSS文件的目录中。一个较完整的 package 文件看起来如下：
 
     {
+    "format":"png8",
     "output": {
         "./dist/peaches.css": [
             "./src/base.css",
@@ -33,6 +34,12 @@ package.json
     }
 
 其中主要又两个字段：`output` 和 `server`。
+## format
+`format`定义sprite图片的压缩格式，默认为png8 。可选项有：
+
+* png8 [default]
+* png24
+
 ## output
 `output`定义文件打包规则，如上面的例子中，将合并两个成两个CSS文件。`./dist/peaches.css` 文件由三个文件组成，文件安装数组的顺序合并。  
 这里key和value都应该安装`package.json`的相对位置设置。

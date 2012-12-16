@@ -21,6 +21,8 @@ program
 if (!program.pkg) {
     program.pkg = './package.json';
 }
+//处理成绝对路径。
+program.pkg = path.resolve(program.pkg);
 if (!program.src) {
     program.src = './src';
 }
@@ -52,6 +54,10 @@ function loadConfig() {
     } catch (ex) {
         logger.error('package.json 定义似乎有问题,检查一下!');
         process.exit(1);
+    }
+    //默认使用png8作为图片压缩格式。
+    if(!config.format || ['png8','png24'].indexOf(config.format) < 0){
+        config.format = 'png8';
     }
     var servers = config.server,
         baseDir = path.dirname(program.pkg),
