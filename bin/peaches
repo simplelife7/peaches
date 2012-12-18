@@ -29,6 +29,7 @@ if (!program.src) {
 if (!program.encoding) {
     program.encoding = 'utf-8';
 }
+
 if (!program.hasOwnProperty('autoReload')) {
     program.autoReload = false;
 }
@@ -59,6 +60,10 @@ function loadConfig() {
     if(!config.format || ['png8','png24'].indexOf(config.format) < 0){
         config.format = 'png8';
     }
+    if(typeof config.sort === 'undefined' || ["0","1"].indexOf(config.sort.toString()) < 0){
+        config.sort = 0;
+    }
+    config.sort = config.sort.toString();
     var servers = config.server,
         baseDir = path.dirname(program.pkg),
         o, dist;
