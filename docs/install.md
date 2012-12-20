@@ -41,3 +41,13 @@
         brew install wget
 
 关于brew，请[点击这里查看](http://mxcl.github.com/homebrew/)
+
+### 在ubuntu下安装
+#### 安装依赖
+`sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++`
+
+#### 安装peaches
+
+`npm install peaches -g`
+
+
