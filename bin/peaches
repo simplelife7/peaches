@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
 var path = require('path'),
+    logger = require('colorful').logging,
     fs = require('fs'),
     program = require('commander'),
     pkg = require('../package.json'),
-    version = pkg.version,
-    peaches = require('../lib/peaches'),
-    logger = require('nlogger').logger('peaches'),
-    cli = require('../lib/cli');
+    version = pkg.version;
 
 program
     .version(version)
+    .option('-v --verbose', 'show more logging')
+    .option('-q --quiet', 'show less logging')
     .option('build', '编译项目')
     .option('deploy', '编译并发布项目,主要用于自动上传图片到线上服务器')
     .option('-p, --pkg <package.json>', '设置package.json的路径,默认使用当前目录下的package.json')
@@ -33,6 +33,7 @@ if (!program.encoding) {
 if (!program.hasOwnProperty('autoReload')) {
     program.autoReload = false;
 }
+logger.config(program);
 
 /**
  * 读取打包配置
@@ -116,7 +117,7 @@ function loadConfig() {
 }
 
 var config = loadConfig(),
-    watchFileList = [];
+    watchFileList = [],cli = require('../lib/cli');
 // 当CSS文件变更是，自动编译 开始。。。
 function watchFile(curr, prev) {
     if (curr.mtime.getTime() !== prev.mtime.getTime()) {
@@ -151,6 +152,5 @@ if (program.autoReload) {
     });
 }
 // 当CSS文件变更是，自动编译 结束。。。
-
 
 cli.main(config);

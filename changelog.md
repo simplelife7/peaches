@@ -1,5 +1,8 @@
 # change log
 
+## 0.3.3 2012-12-22
+* 使用colorful作为logger输出工具，更友好的logger样式。
+
 ## 0.3.2 2012-12-19
 * bugfix 无图片合并时会报错的处理。
 * bugfix linux下，require区分大小写的处理。
