@@ -33,15 +33,6 @@
 
 注意原文档中的这句话：“Note; if libpng fails try [installing this binary](http://ethan.tira-thompson.com/Mac_OS_X_Ports.html)”
 
-
-
-###  安装wget
-程序使用`wget`下载图片，所以请确保安装了`wget`。
-        
-        brew install wget
-
-关于brew，请[点击这里查看](http://mxcl.github.com/homebrew/)
-
 ### 在ubuntu下安装
 #### 安装依赖
 `sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++`
