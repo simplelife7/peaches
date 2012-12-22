@@ -9,12 +9,16 @@ var path = require('path'),
 
 program
     .version(version)
-    .option('-v --verbose', 'show more logging')
-    .option('-q --quiet', 'show less logging')
+
     .option('build', '编译项目')
     .option('deploy', '编译并发布项目,主要用于自动上传图片到线上服务器')
+    .option('-v, --verbose', '显示更多的日志信息')
+    .option('-q, --quiet', '显示较少的日志信息')
     .option('-p, --pkg <package.json>', '设置package.json的路径,默认使用当前目录下的package.json')
     .option('--encoding <encoding>', '指定在进行文件处理时，涉及到的文件编码。 默认是 utf8 ')
+    .option('-c, --clean','清空缓存文件，系统会保留备份文件夹，不如不需要备份，请结合 --force参数使用')
+    // 无法删除有文件的目录，暂时不做处理。
+    //.option('--force','清空文件时，直接删除')
     .option('-r, --autoReload', '设置是否根据文件的变更自动编译。默认为 false')
     .parse(process.argv);
 
@@ -43,7 +47,7 @@ logger.config(program);
  */
 function loadConfig() {
     "use strict";
-    //如果没有输入pkg配置的路径,那么查找当前路径中是否又package.json
+    //如果没有输入pkg配置的路径,那么查找当前路径中是否有package.json
     var config;
     try {
         config = fs.readFileSync(program.pkg);
@@ -57,6 +61,7 @@ function loadConfig() {
         logger.error('package.json 定义似乎有问题,检查一下!');
         process.exit(1);
     }
+    config.program = program;
     //默认使用png8作为图片压缩格式。
     if(!config.format || ['png8','png24'].indexOf(config.format) < 0){
         config.format = 'png8';
@@ -80,14 +85,15 @@ function loadConfig() {
         config.server = servers.build;
     }
 // 转化为绝对路径 开始..
-    config.server.root = path.join(baseDir, config.server.root + '/');
-    config.server.tmp = path.join(baseDir, config.server.tmp + '/');
+    config.server.root = path.join(baseDir, config.server.root);
+    config.server.tmp = path.join(baseDir, config.server.tmp);
+
     if (!fs.existsSync(config.server.root)) {
         try {
             fs.mkdirSync(config.server.root);
         }
         catch (e) {
-            logger.error('无法创建目录：{}', config.server.root);
+            logger.error('无法创建目录：%s', config.server.root);
             process.exit(1);
         }
     }
@@ -96,7 +102,7 @@ function loadConfig() {
             fs.mkdirSync(config.server.tmp);
         }
         catch (e) {
-            logger.error('无法创建目录：{}', config.server.tmp);
+            logger.error('无法创建目录：%s', config.server.tmp);
             process.exit(1);
         }
     }
