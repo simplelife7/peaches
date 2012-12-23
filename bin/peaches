@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var path = require('path'),
+    async = require('async'),
     logger = require('colorful').logging,
     fs = require('fs'),
     program = require('commander'),
@@ -15,122 +16,211 @@ program
     .option('-v, --verbose', '显示更多的日志信息')
     .option('-q, --quiet', '显示较少的日志信息')
     .option('-p, --pkg <package.json>', '设置package.json的路径,默认使用当前目录下的package.json')
-    .option('--encoding <encoding>', '指定在进行文件处理时，涉及到的文件编码。 默认是 utf8 ')
-    .option('-c, --clean','清空缓存文件，系统会保留备份文件夹，不如不需要备份，请结合 --force参数使用')
+    //.option('--encoding <encoding>', '指定在进行文件处理时，涉及到的文件编码。 默认是 utf8 ')
+    .option('-c, --clean', '清空缓存文件，系统会保留备份文件夹，不如不需要备份，请结合 --force参数使用')
     // 无法删除有文件的目录，暂时不做处理。
     //.option('--force','清空文件时，直接删除')
     .option('-r, --autoReload', '设置是否根据文件的变更自动编译。默认为 false')
+    .option('-s, --sort', '设置图片的排列方式， h 为纵向排列，v 为横向排列。默认为h，纵向排列')
+    .option('-f, --format <png8>', '设置图片输出格式，可以选择 png8  、 png24 。默认为 png8')
     .parse(process.argv);
 
-if (!program.pkg) {
-    program.pkg = './package.json';
-}
-//处理成绝对路径。
-program.pkg = path.resolve(program.pkg);
-if (!program.src) {
-    program.src = './src';
-}
-if (!program.encoding) {
-    program.encoding = 'utf-8';
-}
+var config , watchFileList = [], cli = require('../lib/cli');
+function main() {
+    'use strict';
+    async.series([function (next) {
+        'use strict';
+        /**
+         * 配置logger
+         */
+        logger.config(program);
+        next();
+    }, function (next) {
+        'use strict';
+        /**
+         * 处理pkg
+         */
+        if (!program.hasOwnProperty('pkg')) {
+            program.pkg = './package.json';
+        }
+        //处理成绝对路径。
+        program.pkg = path.resolve(program.pkg);
+        logger.debug('加载的配置文件是：%s', program.pkg);
+        try {
+            config = fs.readFileSync(program.pkg);
+        } catch (e) {
+            logger.error('无法读取package.json，系统退出！');
+            process.exit(1);
+        }
+        try {
+            config = JSON.parse(config);
+        } catch (ex) {
+            logger.error('package.json 定义似乎有问题,检查一下!');
+            process.exit(1);
+        }
+        next();
+    }, function (next) {
+        /**
+         * 处理 format。
+         * 1. 如果命令行中没有format，那么使用config的配置。
+         * 2. 如果命令行中有format，那么覆盖config配置。
+         * 3. 都没有设置，默认设置为 png8
+         *
+         */
+        'use strict';
+        var formatList = ['png8', 'png24'];
+        // 如果输入了 program.format ，覆盖配置
+        if (typeof program.format !== 'undefined') {
+            config.format = program.format;
+        } else if (typeof config.format === 'undefined') {
+            // 如果 config.format 没有配置，直接使用默认配置。
+            config.format = 'png8';
+        }
 
-if (!program.hasOwnProperty('autoReload')) {
-    program.autoReload = false;
-}
-logger.config(program);
+        if (formatList.indexOf(config.format) > -1) {
+            // 如果 config.format 配置正确，next
+            return next();
+        }
 
-/**
- * 读取打包配置
- * 读取package.json文件,位于脚本执行的目录下.
- * 关于package.json的详细说明: docs/package.json.md;
- * @return {Object} package
- */
-function loadConfig() {
-    "use strict";
-    //如果没有输入pkg配置的路径,那么查找当前路径中是否有package.json
-    var config;
-    try {
-        config = fs.readFileSync(program.pkg);
-    } catch (e) {
-        logger.error('无法读取package.json，系统退出！');
-        process.exit(1);
-    }
-    try {
-        config = JSON.parse(config);
-    } catch (ex) {
-        logger.error('package.json 定义似乎有问题,检查一下!');
-        process.exit(1);
-    }
-    config.program = program;
-    //默认使用png8作为图片压缩格式。
-    if(!config.format || ['png8','png24'].indexOf(config.format) < 0){
-        config.format = 'png8';
-    }
-    if(typeof config.sort === 'undefined' || ["0","1"].indexOf(config.sort.toString()) < 0){
-        config.sort = 0;
-    }
-    config.sort = config.sort.toString();
-    var servers = config.server,
-        baseDir = path.dirname(program.pkg),
-        o, dist;
+        // 剩余的情况为：输入格式错误的情况，需要提醒用户。
+        logger.warn('输入的图片 "' + config.format + '" 格式不正确，请选择：');
+        program.choose(formatList, function (i) {
+            logger.info('您选择了 %d "%s"', i + 1, formatList[i]);
+            config.format = formatList[i];
+            next();
+        });
 
-    if (program.build) {
-        config.server = servers.build;
-    }
-    else if (program.deploy) {
-        config.server = servers.deploy;
-    }
+    }, function (next) {
+        /**
+         * 处理 图片排序。
+         * 1. 如果命令行中没有sort，那么使用config的配置。
+         * 2. 如果命令行中有sort，那么覆盖config配置。
+         * 3. 都没有设置，默认设置为 h，纵向排序。
+         *
+         */
+        'use strict';
+        var sortList = ['h', 'v'];
+        if (typeof program.sort !== 'undefined') {
+            config.sort = program.sort;
+        } else if (typeof config.sort === 'undefined') {
+            config.sort = 'h';
+        }
+
+        if (sortList.indexOf(config.sort) > -1) {
+            return next();
+        }
+
+        logger.warn('输入的图片排序 "' + config.sort + '" 格式不正确，请选择：');
+        program.choose(sortList, function (i) {
+            logger.info('您选择了 %d "%s"', i + 1, sortList[i]);
+            config.sort = sortList[i];
+            next();
+        });
+    }, function (next) {
+        'use strict';
+        if (typeof program.autoReload === 'undefined') {
+            program.autoReload = false;
+        }
+        next();
+    }, function (next) {
+        'use strict';
+        if (program.build) {
+            config.server = config.servers.build;
+        }
+        else if (program.deploy) {
+            config.server = config.servers.deploy;
+        }
 // 如果没有输入 build 和 deploy 那么使用 build方式处理。
-    else {
-        config.server = servers.build;
-    }
-// 转化为绝对路径 开始..
-    config.server.root = path.join(baseDir, config.server.root);
-    config.server.tmp = path.join(baseDir, config.server.tmp);
+        else {
+            config.server = config.server.build;
+        }
+        delete config.servers;
 
-    if (!fs.existsSync(config.server.root)) {
-        try {
-            fs.mkdirSync(config.server.root);
-        }
-        catch (e) {
-            logger.error('无法创建目录：%s', config.server.root);
-            process.exit(1);
-        }
-    }
-    if (!fs.existsSync(config.server.tmp)) {
-        try {
-            fs.mkdirSync(config.server.tmp);
-        }
-        catch (e) {
-            logger.error('无法创建目录：%s', config.server.tmp);
-            process.exit(1);
-        }
-    }
+        next();
 
-    var output2 = {};
-    for (o in config.output) {
-        if (config.output.hasOwnProperty(o)) {
-            dist = path.join(baseDir, o);
-            output2[dist] = [];
-            config.output[o].forEach(function (src) {
-                output2[dist].push(path.join(baseDir, src));
+    }, function (next) {
+        /**
+         * 全部转换为绝对路径
+         * */
+        'use strict';
+        var baseDir = path.dirname(program.pkg),
+            o, dist;
+
+        config.server.root = path.join(baseDir, config.server.root);
+        config.server.tmp = path.join(baseDir, config.server.tmp);
+
+        var output2 = {};
+        for (o in config.output) {
+            if (config.output.hasOwnProperty(o)) {
+                dist = path.join(baseDir, o);
+                output2[dist] = [];
+                config.output[o].forEach(function (src) {
+                    output2[dist].push(path.join(baseDir, src));
+                });
+            }
+        }
+        config.output = output2;
+
+        next();
+
+    }, function (next) {
+        /**
+         * 创建目录
+         * */
+        'use strict';
+        if (!fs.existsSync(config.server.root)) {
+            try {
+                fs.mkdirSync(config.server.root);
+            }
+            catch (e) {
+                logger.error('无法创建目录：%s', config.server.root);
+                process.exit(1);
+            }
+        }
+        if (!fs.existsSync(config.server.tmp)) {
+            try {
+                fs.mkdirSync(config.server.tmp);
+            }
+            catch (e) {
+                logger.error('无法创建目录：%s', config.server.tmp);
+                process.exit(1);
+            }
+        }
+        next();
+    }
+    ], function () {
+        'use strict';
+        config.program = program;
+        cli.main(config);
+
+        if (program.autoReload) {
+            watchOutput();
+
+            fs.watchFile(program.pkg, function (curr, prev) {
+                if (curr.mtime.getTime() !== prev.mtime.getTime()) {
+                    config = {};
+                    watchFileList.forEach(function (file) {
+                        fs.unwatchFile(file, watchFile);
+                    });
+                    watchFileList = [];
+                    watchOutput();
+                    main();
+                }
             });
         }
-    }
-    config.output = output2;
-    // 转化为绝对路径 结束..
-    return config;
+    });
 }
 
-var config = loadConfig(),
-    watchFileList = [],cli = require('../lib/cli');
-// 当CSS文件变更是，自动编译 开始。。。
+
+// 当CSS文件变更时，自动编译 开始。。。
 function watchFile(curr, prev) {
+    'use strict';
     if (curr.mtime.getTime() !== prev.mtime.getTime()) {
         cli.main(config);
     }
 }
 function watchOutput() {
+    'use strict';
     for (var o in config.output) {
         if (config.output.hasOwnProperty(o)) {
             config.output[o].forEach(function (cssFile) {
@@ -141,22 +231,8 @@ function watchOutput() {
     }
 }
 
-if (program.autoReload) {
-    watchOutput();
 
-    fs.watchFile(program.pkg, function (curr, prev) {
-        if (curr.mtime.getTime() !== prev.mtime.getTime()) {
-            config = loadConfig();
-            cli.main(config);
-            
-            watchFileList.forEach(function (file) {
-                fs.unwatchFile(file, watchFile);
-            });
-            watchFileList = [];
-            watchOutput();
-        }
-    });
-}
-// 当CSS文件变更是，自动编译 结束。。。
+main();
 
-cli.main(config);
+
+
