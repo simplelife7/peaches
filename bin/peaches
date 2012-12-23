@@ -191,6 +191,7 @@ function main() {
     ], function () {
         'use strict';
         config.program = program;
+        config.clean = program.clean;
         cli.main(config);
 
         if (program.autoReload) {
