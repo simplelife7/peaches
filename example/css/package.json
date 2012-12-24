@@ -5,6 +5,11 @@
             "./src/button.css",
             "./src/index.css"
         ],
+        "./dist/peaches2.css": [
+            "./src/base.css",
+            "./src/button.css",
+            "./src/index.css"
+        ],
         "./dist/test.css": [
             "./src/test.css"
         ]
