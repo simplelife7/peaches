@@ -125,7 +125,7 @@ function main() {
     }, function (next) {
         'use strict';
         if (program.build) {
-            config.server = config.servers.build;
+            config.server = config.server.build;
         }
         else if (program.deploy) {
             config.server = config.servers.deploy;

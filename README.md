@@ -24,7 +24,7 @@
 ## 使用
 在命令行中执行
         
-        peaches bulid
+        peaches build
  
  更多参数,请[点击查看这里](https://github.com/sliuqin/peaches/blob/master/docs/命令行参数.md)      
        
