@@ -128,7 +128,7 @@ function main() {
             config.server = config.server.build;
         }
         else if (program.deploy) {
-            config.server = config.servers.deploy;
+            config.server = config.server.deploy;
         }
 // 如果没有输入 build 和 deploy 那么使用 build方式处理。
         else {
