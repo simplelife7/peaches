@@ -1,4 +1,4 @@
-[Peaches](https://github.com/sliuqin/peaches)
+[Peaches](http://peaches.io/)
 ======
 > 简单、自然的书写样式
 
