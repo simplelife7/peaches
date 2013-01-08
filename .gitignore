@@ -18,3 +18,4 @@ npm-debug.log
 example/css/tmp
 example/css/images
 example/css/dist
+.iml
